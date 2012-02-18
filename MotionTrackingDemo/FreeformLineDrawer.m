@@ -20,10 +20,14 @@ CGPoint midPoint(CGPoint p1, CGPoint p2)
   
   self = [super init];
   if (self) {
-    previousPoint1 = previousPoint2 = currentPoint = startPoint;
-    pathRef = CGPathCreateMutable();
+    [self startNewPoint:startPoint];
   }
   return self;
+}
+- (void)startNewPoint:(CGPoint)newPoint {
+  previousPoint1 = previousPoint2 = currentPoint = newPoint;
+  CGPathRelease(pathRef);
+  pathRef = CGPathCreateMutable();
 }
 
 - (void)updatePoint:(CGPoint)newPoint {
@@ -37,41 +41,17 @@ CGPoint midPoint(CGPoint p1, CGPoint p2)
   // calculate mid point    
   CGPoint mid1 = midPoint(previousPoint1, previousPoint2);     
   CGPoint mid2 = midPoint(currentPoint, previousPoint1);    
-  //UIGraphicsBeginImageContext(self.imageView.frame.size);    
-  //CGContextRef context = UIGraphicsGetCurrentContext();    
-//  [self.imageView.image drawInRect:CGRectMake(0, 0, self.imageView.frame.size.width, self.imageView.frame.size.height)]; 
-  
-  
- 
-//  CGContextMoveToPoint(ctx, mid1.x, mid1.y);    
-//  
-//  // Use QuadCurve is the key    
-////  CGAffineTransformMake(1, 0, 0, 1, 0, 0)
-//  CGPathAddQuadCurveToPoint(pathRef, &CGAffineTransformIdentity, previousPoint1.x, previousPoint1.y, mid2.x, mid2.y);
-////  CGContextAddQuadCurveToPoint(ctx, previousPoint1.x, previousPoint1.y, mid2.x, mid2.y);     
-//  CGContextSetLineCap(ctx, kCGLineCapRound);    
-//  CGContextSetLineWidth(ctx, 2.0);    
-//  CGContextSetRGBStrokeColor(ctx, 1.0, 0.0, 0.0, 1.0);    
-//  CGContextStrokePath(ctx);    
-//  CGContextAddPath(ctx, pathRef);
-//  CGContextDrawPath(ctx, kCGPathFill);
-//  NSLog(@"**********DRAW LAYER*****************");
-//  
-//  //self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();    
-//  //UIGraphicsEndImageContext();
-  
   
   CGPathMoveToPoint(pathRef, NULL, mid1.x, mid1.y);
   CGPathAddQuadCurveToPoint(pathRef, NULL, previousPoint1.x, previousPoint1.y, mid2.x, mid2.y);
   
   CGContextSetLineCap(ctx, kCGLineCapRound);    
-  CGContextSetLineWidth(ctx, 2.0);    
+  CGContextSetLineWidth(ctx, 5.0);    
   CGContextSetRGBStrokeColor(ctx, 1.0, 0.0, 0.0, 1.0);    
   CGContextStrokePath(ctx);    
   
   CGContextAddPath(ctx, pathRef);
   CGContextDrawPath(ctx, kCGPathStroke);
-  
 }
 
 - (void)dealloc {

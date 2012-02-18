@@ -20,6 +20,7 @@ CGPoint midPoint(CGPoint p1, CGPoint p2);
 }
 
 - (id)initWithStartPoint:(CGPoint)startPoint;
+- (void)startNewPoint:(CGPoint)newPoint;
 - (void)updatePoint:(CGPoint)newPoint;
 
 

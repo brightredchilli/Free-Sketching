@@ -44,10 +44,12 @@
     if (!freeformLayer) {
       freeformLineDrawer = [[FreeformLineDrawer alloc] initWithStartPoint:[sender locationInView:self.view]];
       freeformLayer = [[CALayer alloc] init];
-      freeformLayer.frame = self.view.frame;
+      freeformLayer.frame = self.view.bounds; //do not capture view's offset in it's superview
       freeformLayer.delegate = freeformLineDrawer;
       [self.view.layer addSublayer:freeformLayer];
       NSLog(@"layer created");
+    } else {
+      [freeformLineDrawer startNewPoint:[sender locationInView:self.view]];
     }
    
   }
@@ -59,6 +61,10 @@
     NSLog(@"layer updated");
     
   }
+  
+  if (sender.state == UIGestureRecognizerStateEnded) {
+    //additionally, a callback here can be specified to save the freeformLineDrawer object to some other place.
+  }
 }
 
 #pragma mark -
@@ -66,8 +72,8 @@
 
 - (IBAction)drawSquiggly:(id)sender {
   [freeformLayer removeFromSuperlayer];
-  freeformLayer = nil;
-  freeformLineDrawer = nil;
+  freeformLayer = nil; //remove previous lines
+  freeformLineDrawer = nil; 
   [self.view removeGestureRecognizer:panGestureRecognizer]; //remove old recognizer if it exists
   panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(drawFreeformLineHandler:)];
   [self.view addGestureRecognizer:panGestureRecognizer];
