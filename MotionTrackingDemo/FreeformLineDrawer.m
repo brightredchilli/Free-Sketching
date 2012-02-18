@@ -17,12 +17,10 @@ CGPoint midPoint(CGPoint p1, CGPoint p2)
 @implementation FreeformLineDrawer 
 
 - (id)initWithStartPoint:(CGPoint)startPoint {
-  
   self = [super init];
   if (self) {
     pathsSet = CFArrayCreateMutable(NULL, 2, &kCFTypeArrayCallBacks); 
     [self startNewPoint:startPoint];
-    
   }
   return self;
 }
@@ -52,16 +50,16 @@ CGPoint midPoint(CGPoint p1, CGPoint p2)
   CGPathMoveToPoint(pathRef, NULL, mid1.x, mid1.y);
   CGPathAddQuadCurveToPoint(pathRef, NULL, previousPoint1.x, previousPoint1.y, mid2.x, mid2.y);
   
+  //could probably modify these settings to add a double stroke
   CGContextSetLineCap(ctx, kCGLineCapRound);    
-  CGContextSetLineWidth(ctx, 5.0);    
+  CGContextSetLineWidth(ctx, 10.0);    
   CGContextSetRGBStrokeColor(ctx, 1.0, 0.0, 0.0, 1.0);    
   CGContextStrokePath(ctx);    
-
   
   for (CFIndex i = 0; i < CFArrayGetCount(pathsSet); i++) {
-    CGContextAddPath(ctx, CFArrayGetValueAtIndex(pathsSet, i));
+    CGContextAddPath(ctx, CFArrayGetValueAtIndex(pathsSet, i)); //loops through all the current paths and adds them to the context
   }
-  CGContextDrawPath(ctx, kCGPathStroke);
+  CGContextDrawPath(ctx, kCGPathStroke); 
 }
 
 - (void)dealloc {

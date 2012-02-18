@@ -31,6 +31,8 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    panGestureRecognizer = nil;
+    freeformLineDrawer = nil;
 }
 
 
@@ -40,14 +42,12 @@
   
   
   if (sender.state == UIGestureRecognizerStateBegan) {
-
     if (!freeformLayer) {
       freeformLineDrawer = [[FreeformLineDrawer alloc] initWithStartPoint:[sender locationInView:self.view]];
       freeformLayer = [[CALayer alloc] init];
       freeformLayer.frame = self.view.bounds; //do not capture view's offset in it's superview
-      freeformLayer.delegate = freeformLineDrawer;
+      freeformLayer.delegate = freeformLineDrawer; //ask the freeform drawer object to handle all kinds of drawing
       [self.view.layer addSublayer:freeformLayer];
-      NSLog(@"layer created");
     } else {
       [freeformLineDrawer startNewPoint:[sender locationInView:self.view]];
     }
@@ -58,12 +58,10 @@
     //start drawin lines baby...
     [freeformLineDrawer updatePoint:[sender locationInView:self.view]];
     [freeformLayer setNeedsDisplay];
-    NSLog(@"layer updated");
-    
   }
   
   if (sender.state == UIGestureRecognizerStateEnded) {
-    //additionally, a callback here can be specified to save the freeformLineDrawer object to some other place.
+    //additionally, a callback here can be specified to query the freeformLineDrawer object to extract points
   }
 }
 

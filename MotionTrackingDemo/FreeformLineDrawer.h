@@ -16,7 +16,7 @@ CGPoint midPoint(CGPoint p1, CGPoint p2);
   CGPoint previousPoint1; //1 point behind 
   CGPoint currentPoint;
   
-  CFMutableArrayRef pathsSet;
+  CFMutableArrayRef pathsSet; //an array to keep track of all the paths we have drawn
   CGMutablePathRef pathRef;
 }
 
