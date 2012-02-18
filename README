@@ -1,0 +1,13 @@
+
+Freeform Drawing in iOS
+
+This sample project demonstrates how to draw freeform lines in iOS. Based strongly on: http://stackoverflow.com/questions/5076622/iphone-smooth-sketch-drawing-algorithm
+
+The main classes are
+- MotionTrackingViewController.h/m
+ View Controller that adds a pan gesture recognizer to the screen and conveys the information to the drawing delegate, FreeformLineDrawer. This controller also creates a layer that is added to the view.
+
+- FreeformLineDrawer.h/m
+ Drawing delegate for the CALayer. Maintains a CFMutableArray that keeps track of all the paths that have been drawn onto the screen. Keeps track of paths that have been added.
+
+Contributions are welcome.
