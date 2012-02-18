@@ -20,14 +20,21 @@ CGPoint midPoint(CGPoint p1, CGPoint p2)
   
   self = [super init];
   if (self) {
+    pathsSet = CFArrayCreateMutable(NULL, 2, &kCFTypeArrayCallBacks); 
     [self startNewPoint:startPoint];
+    
   }
   return self;
 }
 - (void)startNewPoint:(CGPoint)newPoint {
   previousPoint1 = previousPoint2 = currentPoint = newPoint;
-  CGPathRelease(pathRef);
+  
+  if (pathRef) {
+    CGPathRelease(pathRef);
+  }
+  
   pathRef = CGPathCreateMutable();
+  CFArrayAppendValue(pathsSet, pathRef);
 }
 
 - (void)updatePoint:(CGPoint)newPoint {
@@ -49,12 +56,16 @@ CGPoint midPoint(CGPoint p1, CGPoint p2)
   CGContextSetLineWidth(ctx, 5.0);    
   CGContextSetRGBStrokeColor(ctx, 1.0, 0.0, 0.0, 1.0);    
   CGContextStrokePath(ctx);    
+
   
-  CGContextAddPath(ctx, pathRef);
+  for (CFIndex i = 0; i < CFArrayGetCount(pathsSet); i++) {
+    CGContextAddPath(ctx, CFArrayGetValueAtIndex(pathsSet, i));
+  }
   CGContextDrawPath(ctx, kCGPathStroke);
 }
 
 - (void)dealloc {
+  CFRelease(pathsSet);
   CGPathRelease(pathRef);
 }
 
