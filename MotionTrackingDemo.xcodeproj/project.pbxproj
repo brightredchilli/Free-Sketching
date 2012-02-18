@@ -1,0 +1,345 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2EE8360F14EEB11100FCB196 /* FreeformLineDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE8360E14EEB11100FCB196 /* FreeformLineDrawer.m */; };
+		2EE8361214EEB54A00FCB196 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EE8361114EEB54A00FCB196 /* QuartzCore.framework */; };
+		6B114EB214E1873900441367 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B114EB114E1873900441367 /* UIKit.framework */; };
+		6B114EB414E1873900441367 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B114EB314E1873900441367 /* Foundation.framework */; };
+		6B114EB614E1873900441367 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B114EB514E1873900441367 /* CoreGraphics.framework */; };
+		6B114EBC14E1873900441367 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B114EBA14E1873900441367 /* InfoPlist.strings */; };
+		6B114EBE14E1873900441367 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B114EBD14E1873900441367 /* main.m */; };
+		6B114EC214E1873900441367 /* MotionTrackingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B114EC114E1873900441367 /* MotionTrackingAppDelegate.m */; };
+		6B114EC514E1873900441367 /* MotionTrackingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B114EC414E1873900441367 /* MotionTrackingViewController.m */; };
+		6B114EC814E1873900441367 /* MotionTrackingViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B114EC614E1873900441367 /* MotionTrackingViewController_iPhone.xib */; };
+		6B114ECB14E1873900441367 /* MotionTrackingViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B114EC914E1873900441367 /* MotionTrackingViewController_iPad.xib */; };
+		6B16EBB414EEA44700E3B6CF /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B16EBB314EEA44700E3B6CF /* 1.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2EE8360D14EEB11100FCB196 /* FreeformLineDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeformLineDrawer.h; sourceTree = "<group>"; };
+		2EE8360E14EEB11100FCB196 /* FreeformLineDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeformLineDrawer.m; sourceTree = "<group>"; };
+		2EE8361114EEB54A00FCB196 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6B114EAD14E1873900441367 /* MotionTrackingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionTrackingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B114EB114E1873900441367 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6B114EB314E1873900441367 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6B114EB514E1873900441367 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6B114EB914E1873900441367 /* MotionTrackingDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MotionTrackingDemo-Info.plist"; sourceTree = "<group>"; };
+		6B114EBB14E1873900441367 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B114EBD14E1873900441367 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B114EBF14E1873900441367 /* MotionTrackingDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MotionTrackingDemo-Prefix.pch"; sourceTree = "<group>"; };
+		6B114EC014E1873900441367 /* MotionTrackingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MotionTrackingAppDelegate.h; sourceTree = "<group>"; };
+		6B114EC114E1873900441367 /* MotionTrackingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionTrackingAppDelegate.m; sourceTree = "<group>"; };
+		6B114EC314E1873900441367 /* MotionTrackingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MotionTrackingViewController.h; sourceTree = "<group>"; };
+		6B114EC414E1873900441367 /* MotionTrackingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionTrackingViewController.m; sourceTree = "<group>"; };
+		6B114EC714E1873900441367 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MotionTrackingViewController_iPhone.xib; sourceTree = "<group>"; };
+		6B114ECA14E1873900441367 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MotionTrackingViewController_iPad.xib; sourceTree = "<group>"; };
+		6B114ED214E1873900441367 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		6B114EDA14E1873900441367 /* MotionTrackingDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MotionTrackingDemoTests-Info.plist"; sourceTree = "<group>"; };
+		6B114EDC14E1873900441367 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6B114EDE14E1873900441367 /* MotionTrackingDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MotionTrackingDemoTests.h; sourceTree = "<group>"; };
+		6B114EDF14E1873900441367 /* MotionTrackingDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionTrackingDemoTests.m; sourceTree = "<group>"; };
+		6B16EBB314EEA44700E3B6CF /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B114EAA14E1873900441367 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EE8361214EEB54A00FCB196 /* QuartzCore.framework in Frameworks */,
+				6B114EB214E1873900441367 /* UIKit.framework in Frameworks */,
+				6B114EB414E1873900441367 /* Foundation.framework in Frameworks */,
+				6B114EB614E1873900441367 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B114EA214E1873900441367 = {
+			isa = PBXGroup;
+			children = (
+				6B114EB714E1873900441367 /* MotionTrackingDemo */,
+				6B114ED814E1873900441367 /* MotionTrackingDemoTests */,
+				6B114EB014E1873900441367 /* Frameworks */,
+				6B114EAE14E1873900441367 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B114EAE14E1873900441367 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B114EAD14E1873900441367 /* MotionTrackingDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B114EB014E1873900441367 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EE8361114EEB54A00FCB196 /* QuartzCore.framework */,
+				6B114EB114E1873900441367 /* UIKit.framework */,
+				6B114EB314E1873900441367 /* Foundation.framework */,
+				6B114EB514E1873900441367 /* CoreGraphics.framework */,
+				6B114ED214E1873900441367 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B114EB714E1873900441367 /* MotionTrackingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				6B114EC014E1873900441367 /* MotionTrackingAppDelegate.h */,
+				6B114EC114E1873900441367 /* MotionTrackingAppDelegate.m */,
+				6B114EC314E1873900441367 /* MotionTrackingViewController.h */,
+				6B114EC414E1873900441367 /* MotionTrackingViewController.m */,
+				6B114EC614E1873900441367 /* MotionTrackingViewController_iPhone.xib */,
+				6B114EC914E1873900441367 /* MotionTrackingViewController_iPad.xib */,
+				6B114EB814E1873900441367 /* Supporting Files */,
+				2EE8360D14EEB11100FCB196 /* FreeformLineDrawer.h */,
+				2EE8360E14EEB11100FCB196 /* FreeformLineDrawer.m */,
+			);
+			path = MotionTrackingDemo;
+			sourceTree = "<group>";
+		};
+		6B114EB814E1873900441367 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B16EBB314EEA44700E3B6CF /* 1.jpg */,
+				6B114EB914E1873900441367 /* MotionTrackingDemo-Info.plist */,
+				6B114EBA14E1873900441367 /* InfoPlist.strings */,
+				6B114EBD14E1873900441367 /* main.m */,
+				6B114EBF14E1873900441367 /* MotionTrackingDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B114ED814E1873900441367 /* MotionTrackingDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B114EDE14E1873900441367 /* MotionTrackingDemoTests.h */,
+				6B114EDF14E1873900441367 /* MotionTrackingDemoTests.m */,
+				6B114ED914E1873900441367 /* Supporting Files */,
+			);
+			path = MotionTrackingDemoTests;
+			sourceTree = "<group>";
+		};
+		6B114ED914E1873900441367 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B114EDA14E1873900441367 /* MotionTrackingDemoTests-Info.plist */,
+				6B114EDB14E1873900441367 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B114EAC14E1873900441367 /* MotionTrackingDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B114EE314E1873900441367 /* Build configuration list for PBXNativeTarget "MotionTrackingDemo" */;
+			buildPhases = (
+				6B114EA914E1873900441367 /* Sources */,
+				6B114EAA14E1873900441367 /* Frameworks */,
+				6B114EAB14E1873900441367 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MotionTrackingDemo;
+			productName = MotionTrackingDemo;
+			productReference = 6B114EAD14E1873900441367 /* MotionTrackingDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B114EA414E1873900441367 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "11 Under llc";
+			};
+			buildConfigurationList = 6B114EA714E1873900441367 /* Build configuration list for PBXProject "MotionTrackingDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6B114EA214E1873900441367;
+			productRefGroup = 6B114EAE14E1873900441367 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B114EAC14E1873900441367 /* MotionTrackingDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B114EAB14E1873900441367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B114EBC14E1873900441367 /* InfoPlist.strings in Resources */,
+				6B114EC814E1873900441367 /* MotionTrackingViewController_iPhone.xib in Resources */,
+				6B114ECB14E1873900441367 /* MotionTrackingViewController_iPad.xib in Resources */,
+				6B16EBB414EEA44700E3B6CF /* 1.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B114EA914E1873900441367 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B114EBE14E1873900441367 /* main.m in Sources */,
+				6B114EC214E1873900441367 /* MotionTrackingAppDelegate.m in Sources */,
+				6B114EC514E1873900441367 /* MotionTrackingViewController.m in Sources */,
+				2EE8360F14EEB11100FCB196 /* FreeformLineDrawer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6B114EBA14E1873900441367 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B114EBB14E1873900441367 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6B114EC614E1873900441367 /* MotionTrackingViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B114EC714E1873900441367 /* en */,
+			);
+			name = MotionTrackingViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		6B114EC914E1873900441367 /* MotionTrackingViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B114ECA14E1873900441367 /* en */,
+			);
+			name = MotionTrackingViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		6B114EDB14E1873900441367 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B114EDC14E1873900441367 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B114EE114E1873900441367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B114EE214E1873900441367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B114EE414E1873900441367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MotionTrackingDemo/MotionTrackingDemo-Prefix.pch";
+				INFOPLIST_FILE = "MotionTrackingDemo/MotionTrackingDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6B114EE514E1873900441367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MotionTrackingDemo/MotionTrackingDemo-Prefix.pch";
+				INFOPLIST_FILE = "MotionTrackingDemo/MotionTrackingDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B114EA714E1873900441367 /* Build configuration list for PBXProject "MotionTrackingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B114EE114E1873900441367 /* Debug */,
+				6B114EE214E1873900441367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B114EE314E1873900441367 /* Build configuration list for PBXNativeTarget "MotionTrackingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B114EE414E1873900441367 /* Debug */,
+				6B114EE514E1873900441367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B114EA414E1873900441367 /* Project object */;
+}
