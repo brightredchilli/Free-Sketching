@@ -30,7 +30,6 @@ CGPoint midPoint(CGPoint p1, CGPoint p2)
   previousPoint2 = previousPoint1;
   previousPoint1 = currentPoint;    
   currentPoint = newPoint;
-  
 }
 
 
@@ -41,24 +40,42 @@ CGPoint midPoint(CGPoint p1, CGPoint p2)
   //UIGraphicsBeginImageContext(self.imageView.frame.size);    
   //CGContextRef context = UIGraphicsGetCurrentContext();    
 //  [self.imageView.image drawInRect:CGRectMake(0, 0, self.imageView.frame.size.width, self.imageView.frame.size.height)]; 
- 
-  CGContextMoveToPoint(ctx, mid1.x, mid1.y);    
   
-  // Use QuadCurve is the key    
-//  CGAffineTransformMake(1, 0, 0, 1, 0, 0)
-  CGPathAddQuadCurveToPoint(pathRef, &CGAffineTransformIdentity, previousPoint1.x, previousPoint1.y, mid2.x, mid2.y);
-//  CGContextAddQuadCurveToPoint(ctx, previousPoint1.x, previousPoint1.y, mid2.x, mid2.y);     
+  
+ 
+//  CGContextMoveToPoint(ctx, mid1.x, mid1.y);    
+//  
+//  // Use QuadCurve is the key    
+////  CGAffineTransformMake(1, 0, 0, 1, 0, 0)
+//  CGPathAddQuadCurveToPoint(pathRef, &CGAffineTransformIdentity, previousPoint1.x, previousPoint1.y, mid2.x, mid2.y);
+////  CGContextAddQuadCurveToPoint(ctx, previousPoint1.x, previousPoint1.y, mid2.x, mid2.y);     
+//  CGContextSetLineCap(ctx, kCGLineCapRound);    
+//  CGContextSetLineWidth(ctx, 2.0);    
+//  CGContextSetRGBStrokeColor(ctx, 1.0, 0.0, 0.0, 1.0);    
+//  CGContextStrokePath(ctx);    
+//  CGContextAddPath(ctx, pathRef);
+//  CGContextDrawPath(ctx, kCGPathFill);
+//  NSLog(@"**********DRAW LAYER*****************");
+//  
+//  //self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();    
+//  //UIGraphicsEndImageContext();
+  
+  
+  CGPathMoveToPoint(pathRef, NULL, mid1.x, mid1.y);
+  CGPathAddQuadCurveToPoint(pathRef, NULL, previousPoint1.x, previousPoint1.y, mid2.x, mid2.y);
+  
   CGContextSetLineCap(ctx, kCGLineCapRound);    
   CGContextSetLineWidth(ctx, 2.0);    
   CGContextSetRGBStrokeColor(ctx, 1.0, 0.0, 0.0, 1.0);    
   CGContextStrokePath(ctx);    
-  CGContextAddPath(ctx, pathRef);
-  CGContextDrawPath(ctx, kCGPathFill);
-  NSLog(@"**********DRAW LAYER*****************");
   
-  //self.imageView.image = UIGraphicsGetImageFromCurrentImageContext();    
-  //UIGraphicsEndImageContext();
+  CGContextAddPath(ctx, pathRef);
+  CGContextDrawPath(ctx, kCGPathStroke);
+  
 }
 
+- (void)dealloc {
+  CGPathRelease(pathRef);
+}
 
 @end
